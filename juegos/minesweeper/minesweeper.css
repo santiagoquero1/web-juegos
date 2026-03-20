@@ -1,0 +1,170 @@
+body{
+font-family:Segoe UI, Arial;
+background:linear-gradient(135deg,#dfe9f3,#ffffff);
+color:#333;
+text-align:center;
+margin:0;
+padding:20px;
+
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+/* BOTON MENU */
+
+.menu-btn{
+position:absolute;
+top:20px;
+left:20px;
+background:#4caf50;
+color:white;
+padding:10px 16px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+transition:0.2s;
+}
+
+.menu-btn:hover{
+transform:scale(1.1);
+}
+
+/* CONTROLES */
+
+.controls{
+margin-bottom:20px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+align-items:center;
+}
+
+button{
+background:#4caf50;
+color:white;
+border:none;
+padding:10px 18px;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+transition:0.2s;
+}
+
+button:hover{
+background:#43a047;
+transform:scale(1.05);
+}
+
+select{
+padding:8px;
+border-radius:8px;
+}
+
+/* TABLERO */
+
+#board{
+display:grid;
+justify-content:center;
+gap:3px;
+background:#bdbdbd;
+padding:10px;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* CELDAS RESPONSIVAS */
+
+.cell{
+width:min(9vw,36px);
+height:min(9vw,36px);
+
+background:#d6d6d6;
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-weight:bold;
+font-size:clamp(12px,3vw,18px);
+cursor:pointer;
+
+border-top:3px solid #fff;
+border-left:3px solid #fff;
+border-right:3px solid #7b7b7b;
+border-bottom:3px solid #7b7b7b;
+
+transition:transform 0.1s ease;
+}
+
+.cell:active{
+transform:scale(0.9);
+}
+
+.cell.revealed{
+background:#e9e9e9;
+border:1px solid #bdbdbd;
+cursor:default;
+}
+
+.cell.mine{
+background:#ff5252;
+}
+
+/* COLORES CLASICOS */
+
+.n1{color:#0000ff;}
+.n2{color:#008200;}
+.n3{color:#ff0000;}
+.n4{color:#000084;}
+.n5{color:#840000;}
+.n6{color:#008284;}
+.n7{color:#000000;}
+.n8{color:#7b7b7b;}
+
+/* OVERLAY */
+
+.overlay{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#00000090;
+display:none;
+align-items:center;
+justify-content:center;
+flex-direction:column;
+font-size:40px;
+gap:20px;
+}
+
+/* ANIMACION GANAR */
+
+@keyframes winPop{
+0%{transform:scale(0.5);opacity:0;}
+100%{transform:scale(1);opacity:1;}
+}
+
+@keyframes glow{
+0%{box-shadow:0 0 10px #4caf50;}
+50%{box-shadow:0 0 30px #4caf50;}
+100%{box-shadow:0 0 10px #4caf50;}
+}
+
+.overlay.win{
+animation:winPop 0.4s ease;
+}
+
+.overlay.win h2{
+animation:glow 1s infinite;
+color:#4caf50;
+}
+
+/* MOBILE EXTRA */
+
+@media(max-width:600px){
+.controls{
+gap:10px;
+}
+}

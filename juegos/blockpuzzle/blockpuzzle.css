@@ -1,0 +1,201 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:'Segoe UI', Arial, sans-serif;
+  background:linear-gradient(135deg,#f8fbff,#e6f0ff);
+  text-align:center;
+  min-height:100vh;
+  padding:20px;
+  color:#2c3e50;
+}
+
+h1{
+  margin-bottom:15px;
+}
+
+/* HUD */
+.scoreboard{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  font-size:18px;
+  margin-bottom:15px;
+  background:white;
+  padding:10px 25px;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* AREA JUEGO */
+#game{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:20px;
+}
+
+/* TABLERO RESPONSIVE */
+#board{
+  width:90vw;
+  max-width:420px;
+  aspect-ratio:1/1;
+  display:grid;
+  grid-template-columns:repeat(10,1fr);
+  gap:4px;
+  background:#d0e2ff;
+  padding:10px;
+  border-radius:15px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* CELDAS */
+.cell{
+  width:100%;
+  height:100%;
+  background:#f0f6ff;
+  border-radius:6px;
+}
+
+/* BLOQUES */
+.filled{
+  background:linear-gradient(145deg,#4dabf7,#1c7ed6);
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,0.5),
+    0 4px 10px rgba(0,0,0,0.2);
+  animation:pop .2s ease;
+}
+
+@keyframes pop{
+  0%{transform:scale(0.7);}
+  100%{transform:scale(1);}
+}
+
+/* PREVIEW */
+.preview{
+  background:#a5d8ff;
+}
+
+/* PIEZAS */
+#pieces{
+  display:flex;
+  gap:20px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+
+/* CONTENEDOR PIEZA */
+.piece{
+  position:relative;
+  width:90px;
+  height:90px;
+  cursor:grab;
+}
+
+/* BLOQUES PIEZA */
+.block{
+  width:28px;
+  height:28px;
+  background:linear-gradient(145deg,#74c0fc,#339af0);
+  position:absolute;
+  border-radius:5px;
+  box-shadow:
+    inset 0 2px 4px rgba(255,255,255,0.6),
+    0 3px 6px rgba(0,0,0,0.2);
+}
+
+/* LIMPIAR LINEA */
+.clear{
+  animation:clear .3s forwards;
+}
+
+@keyframes clear{
+  50%{
+    transform:scale(1.2);
+    background:#fff;
+  }
+  100%{
+    transform:scale(0);
+    opacity:0;
+  }
+}
+
+/* GAME OVER */
+#gameOver{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
+  display:none;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  font-size:24px;
+}
+
+#gameOver button{
+  margin-top:20px;
+  padding:12px 20px;
+  border:none;
+  border-radius:10px;
+  background:#4dabf7;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+}
+/* PREVIEW VALIDO / INVALIDO */
+.valid{
+  background:#8ce99a !important;
+}
+
+.invalid{
+  background:#ff8787 !important;
+}
+
+/* SNAP */
+.snap{
+  animation:snap .2s ease;
+}
+
+@keyframes snap{
+  0%{transform:scale(0.8);}
+  60%{transform:scale(1.1);}
+  100%{transform:scale(1);}
+}
+
+/* SHAKE ERROR */
+.shake{
+  animation:shake .3s;
+}
+
+@keyframes shake{
+  0%{transform:translateX(0);}
+  25%{transform:translateX(-5px);}
+  50%{transform:translateX(5px);}
+  75%{transform:translateX(-5px);}
+  100%{transform:translateX(0);}
+}
+
+/* PARTICULAS */
+.particle{
+  position:absolute;
+  width:8px;
+  height:8px;
+  background:#4dabf7;
+  border-radius:50%;
+  pointer-events:none;
+  animation:particle .6s forwards;
+}
+
+@keyframes particle{
+  to{
+    transform:translate(var(--x), var(--y));
+    opacity:0;
+  }
+}

@@ -1,0 +1,112 @@
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg,#eef2f7,#dfe9f3);
+  color:#2c3e50;
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:20px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.container{
+  width:100%;
+  max-width:500px;
+  background:white;
+  border-radius:20px;
+  padding:30px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.15);
+  text-align:center;
+}
+
+/* BOTON MENU */
+.menu-btn{
+  position:absolute;
+  top:20px;
+  left:20px;
+  background:#4CAF50;
+  color:white;
+  padding:10px 16px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* TITULO */
+h1{
+  margin-bottom:20px;
+  font-size:28px;
+}
+
+/* PREGUNTA */
+#pregunta{
+  background:#f4f6f8;
+  padding:25px;
+  border-radius:15px;
+  font-size:20px;
+  margin-bottom:20px;
+  min-height:80px;
+}
+
+/* OPCIONES */
+#opciones{
+  display:flex;
+  justify-content:center;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+#opciones button{
+  padding:12px 22px;
+  border:none;
+  border-radius:12px;
+  background:#3498db;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+#opciones button:hover{
+  transform:scale(1.05);
+  background:#2980b9;
+}
+
+/* RESULTADO */
+#resultado{
+  margin-top:25px;
+  font-size:20px;
+  font-weight:bold;
+  color:#27ae60;
+}
+
+/* BOTON START */
+#start{
+  margin-top:20px;
+  padding:12px 25px;
+  border:none;
+  border-radius:12px;
+  background:#ff7f50;
+  color:white;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.2s;
+}
+
+#start:hover{
+  background:#ff6333;
+  transform:scale(1.05);
+}
+
+/* 📱 RESPONSIVE EXTRA */
+@media(max-width:500px){
+  h1{ font-size:22px; }
+  #pregunta{ font-size:18px; }
+}

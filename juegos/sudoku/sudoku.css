@@ -1,0 +1,272 @@
+body{
+
+margin:0;
+font-family: "Segoe UI", Arial, sans-serif;
+text-align:center;
+
+/* 🔥 evita scroll lateral */
+overflow-x:hidden;
+
+/* 🔥 evita zoom raro en mobile */
+touch-action: manipulation;
+
+background: linear-gradient(135deg,#e9eff5,#d7e1ec);
+min-height:100vh;
+
+}
+
+h1{
+margin-top:25px;
+color:#2c3e50;
+font-weight:600;
+}
+
+/* BOTON VOLVER */
+
+.volver{
+position:absolute;
+top:20px;
+left:20px;
+background:#2c3e50;
+color:white;
+padding:8px 14px;
+border-radius:8px;
+text-decoration:none;
+font-size:14px;
+transition:0.2s;
+}
+
+.volver:hover{
+background:#1a252f;
+}
+
+/* CONTROLES */
+
+#controls{
+display:flex;
+justify-content:center;
+align-items:end;
+gap:15px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+/* SELECTS */
+
+.control-group{
+display:flex;
+flex-direction:column;
+font-size:13px;
+color:#34495e;
+}
+
+select{
+padding:7px 12px;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:14px;
+background:white;
+}
+
+/* BOTONES */
+
+.btn{
+padding:8px 16px;
+border:none;
+border-radius:6px;
+background:#3498db;
+color:white;
+cursor:pointer;
+font-size:14px;
+transition:0.2s;
+}
+
+.btn:hover{
+background:#2980b9;
+transform:scale(1.05);
+}
+
+/* BOTON PISTA */
+
+.hint-btn{
+padding:8px 16px;
+border:none;
+border-radius:6px;
+background:#f1c40f;
+font-size:16px;
+cursor:pointer;
+transition:0.2s;
+}
+
+.hint-btn:hover{
+transform:scale(1.3);
+}
+
+/* TIMER */
+
+#timer{
+margin-top:15px;
+font-size:18px;
+font-weight:600;
+color:#2c3e50;
+}
+
+/* TABLERO */
+
+#sudokuBoard{
+
+display:grid;
+justify-content:center;
+
+margin:20px auto;
+
+background:white;
+padding:10px;
+border-radius:10px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+
+/* 🔥 RESPONSIVE */
+width:fit-content;
+max-width:95vw;
+
+}
+
+/* CELDAS */
+
+.cell{
+
+width:42px;
+height:42px;
+
+border:1px solid #dcdcdc;
+
+font-size:20px;
+text-align:center;
+
+box-sizing:border-box;
+
+background:white;
+transition:0.15s;
+
+/* 🔥 CLAVE: evita teclado */
+caret-color: transparent;
+
+}
+
+/* 🔥 quita cursor de escritura */
+.cell:focus{
+outline:none;
+}
+
+/* NUMEROS FIJOS */
+
+.prefilled{
+background:#f3f6fa;
+font-weight:bold;
+color:#2c3e50;
+}
+
+/* CUADRANTES */
+
+.block-right{
+border-right:3px solid #34495e;
+}
+
+.block-bottom{
+border-bottom:3px solid #34495e;
+}
+
+/* SELECCION */
+
+.active{
+background:#cfe8ff;
+}
+
+.highlight{
+background:#eaf4ff;
+}
+
+/* ERROR */
+
+.error{
+color:#e74c3c;
+font-weight:bold;
+}
+
+/* MENSAJE */
+
+#message{
+margin-top:15px;
+font-size:18px;
+color:#2c3e50;
+}
+
+/* TECLADO MOVIL */
+
+#mobilePad{
+margin-top:15px;
+}
+
+#mobilePad button{
+
+width:42px;
+height:42px;
+
+margin:5px;
+
+font-size:18px;
+
+border-radius:8px;
+border:1px solid #ccc;
+
+background:white;
+cursor:pointer;
+
+transition:0.15s;
+
+}
+
+#mobilePad button:hover{
+background:#3498db;
+color:white;
+}
+
+/* CONFETTI */
+
+.confetti{
+position:fixed;
+top:-10px;
+width:8px;
+height:8px;
+background:red;
+animation:fall linear forwards;
+}
+
+.confetti:nth-child(2n){background:#3498db}
+.confetti:nth-child(3n){background:#f1c40f}
+.confetti:nth-child(4n){background:#2ecc71}
+
+@keyframes fall{
+to{
+transform:translateY(100vh) rotate(360deg);
+opacity:0;
+}
+}
+
+/* 🔥 MOBILE PRO */
+
+@media(max-width:600px){
+
+.cell{
+width:9vw;
+height:9vw;
+font-size:16px;
+}
+
+#mobilePad button{
+width:10vw;
+height:10vw;
+}
+
+}

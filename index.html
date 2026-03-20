@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+
+<title>Juegos Gratis Online | Arcade, Retro, Puzzle y Más</title>
+
+<meta name="description" content="Juega juegos gratis online sin descargar. Disfruta juegos arcade, retro, puzzle, memoria, snake, 2048 y más directamente en tu navegador.">
+
+<meta name="keywords" content="juegos gratis, juegos online, juegos arcade, juegos retro, snake, 2048, sudoku, juegos de memoria, juegos divertidos">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="css/menu.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="logo">🎮 Quero Juegos</div>
+
+  <input type="text" placeholder="Buscar juegos..." class="search" id="searchInput">
+
+  <div class="nav-links">
+    <a onclick="filterCategory('all')">Todos</a>
+    <a onclick="filterCategory('arcade')">Arcade</a>
+    <a onclick="filterCategory('puzzle')">Puzzle</a>
+    <a onclick="filterCategory('accion')">Acción</a>
+    <a onclick="filterCategory('memoria')">Memoria</a>
+  </div>
+</nav>
+
+<header>
+<h1>🎮 Juegos Gratis Online - Quero Juegos</h1>
+<p>Elige un juego y diviértete</p>
+</header>
+
+<div class="games-container">
+
+<a href="juegos/antitest/test.html" class="game-card" data-category="puzzle">
+<img src="juegos/antitest/imagenes/miniatura.png" alt="juego test divertido online gratis">
+<h2>Anti-Test</h2>
+<p>Un test inútil</p>
+</a>
+
+<a href="juegos/snake/snake.html" class="game-card" data-category="arcade">
+<img src="juegos/snake/imagenes/miniatura.png" alt="juego snake clásico online gratis">
+<h2>Snake</h2>
+<p>El clásico del celular</p>
+</a>
+
+<a href="juegos/camagotchi/camagotchi.html" class="game-card" data-category="memoria">
+<img src="juegos/camagotchi/imagenes/miniatura.png" alt="juego cuidar mascota virtual online">
+<h2>Camagotchi</h2>
+<p>Cuida a tu camarón virtual</p>
+</a>
+
+<a href="juegos/runner/runner.html" class="game-card" data-category="accion">
+<img src="juegos/runner/imagenes/miniatura.png" alt="juego runner saltar obstáculos online">
+<h2>Runner</h2>
+<p>Salta obstáculos y sobrevive</p>
+</a>
+
+<a href="juegos/flappy/flappy.html" class="game-card" data-category="arcade">
+<img src="juegos/flappy/imagenes/miniatura.png" alt="juego flappy estilo vuelo arcade">
+<h2>Flappy</h2>
+<p>Evita los tubos y vuela</p>
+</a>
+
+<a href="juegos/memoria/memoria.html" class="game-card" data-category="memoria">
+<img src="juegos/memoria/imagenes/miniatura.png" alt="juego de memoria encontrar parejas">
+<h2>Memoria</h2>
+<p>Encuentra las parejas</p>
+</a>
+
+<a href="juegos/memorytest/memorytest.html" class="game-card" data-category="memoria">
+<img src="juegos/memorytest/imagenes/miniatura.png" alt="test de memoria rápido online">
+<h2>Memoria Rápida</h2>
+<p>Recuerda antes de que desaparezca</p>
+</a>
+
+<a href="juegos/mindreader/mindreader.html" class="game-card" data-category="puzzle">
+<img src="juegos/mindreader/imagenes/miniatura.png" alt="juego leer mente truco matemático">
+<h2>Lee tu mente</h2>
+<p>Truco matemático</p>
+</a>
+
+<a href="juegos/blockpuzzle/blockpuzzle.html" class="game-card" data-category="puzzle">
+<img src="juegos/blockpuzzle/imagenes/miniatura.png" alt="juego puzzle bloques completar líneas">
+<h2>Block Puzzle</h2>
+<p>Completa líneas</p>
+</a>
+
+<a href="juegos/whackamole/whackamole.html" class="game-card" data-category="arcade">
+<img src="juegos/whackamole/imagenes/miniatura.png" alt="juego golpear topo arcade online">
+<h2>Whack-a-Mole</h2>
+<p>Golpea al topo</p>
+</a>
+
+<a href="juegos/2048/2048.html" class="game-card" data-category="puzzle">
+<img src="juegos/2048/imagenes/miniatura.png" alt="juego 2048 combinar números puzzle">
+<h2>2048</h2>
+<p>Combina números</p>
+</a>
+
+<a href="juegos/reaction/reaction.html" class="game-card" data-category="accion">
+<img src="juegos/reaction/imagenes/miniatura.png" alt="juego velocidad de reacción online">
+<h2>Reaction</h2>
+<p>Velocidad de reacción</p>
+</a>
+
+<a href="juegos/spaceshooter/spaceshooter.html" class="game-card" data-category="accion">
+<img src="juegos/spaceshooter/imagenes/miniatura.png" alt="juego disparos nave espacial arcade">
+<h2>Space Shooter</h2>
+<p>Destruye enemigos</p>
+</a>
+
+<a href="juegos/sudoku/sudoku.html" class="game-card" data-category="puzzle">
+<img src="juegos/sudoku/imagenes/miniatura.png" alt="juego sudoku online gratis">
+<h2>Sudoku</h2>
+<p>Completa la cuadrícula</p>
+</a>
+
+<a href="juegos/minesweeper/minesweeper.html" class="game-card" data-category="puzzle">
+<img src="juegos/minesweeper/imagenes/miniatura.png" alt="juego buscaminas clásico online">
+<h2>Buscaminas</h2>
+<p>Evita las minas</p>
+</a>
+
+<a href="juegos/precision/precision.html" class="game-card" data-category="accion">
+<img src="juegos/precision/imagenes/miniatura.png" alt="juego de precisión dibujar perfecto">
+<h2>Precisión</h2>
+<p>Dibuja perfecto</p>
+</a>
+
+<a href="juegos/arcade/arcade.html" class="game-card" data-category="arcade">
+<img src="juegos/arcade/imagenes/miniatura.png" alt="juegos arcade clásicos retro">
+<h2>Arcade</h2>
+<p>Clásicos retro</p>
+</a>
+
+</div>
+
+<section class="seo-texto">
+  <h2>Juega los mejores juegos gratis online</h2>
+
+  <p>
+    En Quero Juegos puedes disfrutar de una gran colección de juegos gratis online sin necesidad de descargar nada.
+    Encuentra juegos arcade, juegos retro, juegos de puzzle, juegos de memoria y clásicos como Snake, 2048 o Sudoku.
+  </p>
+
+  <p>
+    Nuestra plataforma ofrece juegos divertidos para todas las edades, incluyendo juegos de acción, juegos de habilidad,
+    juegos de reacción y juegos mentales. Todos los juegos funcionan directamente en tu navegador, tanto en computador
+    como en celular.
+  </p>
+
+  <p>
+    Si buscas juegos online gratis, juegos rápidos o juegos casuales, aquí encontrarás las mejores opciones para jugar
+    en cualquier momento. ¡Explora, elige tu juego favorito y empieza a divertirte ahora!
+  </p>
+   <p>
+    Algunos de nuestros juegos más populares incluyen Snake online, 2048, Sudoku, juegos de memoria y juegos arcade clásicos.
+  </p>
+
+</section>
+
+<footer>
+<p>🎮 Quero Juegos</p>
+</footer>
+
+<footer class="credits">
+© 2026 Web Juegos — Creado por <strong>Santiago Quero</strong>
+</footer>
+
+<script>
+document.getElementById("searchInput").addEventListener("keyup", function(){
+  let filtro = this.value.toLowerCase();
+  let juegos = document.querySelectorAll(".game-card");
+
+  juegos.forEach(juego => {
+    let titulo = juego.querySelector("h2").textContent.toLowerCase();
+    let desc = juego.querySelector("p").textContent.toLowerCase();
+
+    juego.style.display = (titulo.includes(filtro) || desc.includes(filtro)) ? "block" : "none";
+  });
+});
+
+function filterCategory(cat){
+  let juegos = document.querySelectorAll(".game-card");
+
+  juegos.forEach(juego => {
+    juego.style.display = (cat === "all" || juego.dataset.category === cat) ? "" : "none";
+  });
+}
+</script>
+
+</body>
+</html>

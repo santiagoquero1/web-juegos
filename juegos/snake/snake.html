@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Snake Online Gratis | Juego Snake PRO 🐍</title>
+
+<meta name="description" content="Juega Snake online gratis. Disfruta el clásico juego de la serpiente con mejoras, récords y configuraciones. Funciona en celular y computador.">
+
+<meta name="keywords" content="snake online, juego snake gratis, snake pro, juegos clásicos, juegos arcade, snake navegador">
+
+<link rel="stylesheet" href="snake.css">
+</head>
+
+<body>
+
+<a href="../../index.html" class="back-btn">←</a>
+
+<h1>Snake PRO 🐍</h1>
+
+<!-- 🎮 PREVIEW -->
+<div class="game-preview">
+  <img src="../snake/imagenes/miniatura.png" alt="Snake">
+  <button onclick="abrirJuego()">JUGAR</button>
+</div>
+
+<!-- ⬛ CARGA -->
+<div id="cargando">
+  <img src="../snake/imagenes/miniatura.png">
+  <p>Cargando...</p>
+</div>
+
+<!-- 🎮 JUEGO -->
+<div id="modo-juego">
+
+  <button id="salirBtn">✖ Salir</button>
+
+  <div class="game-container">
+
+    <div class="hud">
+      <div>Puntos: <span id="score">0</span></div>
+
+      <div class="rightHud">
+        <span>Récord: <span id="record">0</span></span>
+        <button id="soundBtn">🔊</button>
+        <button id="settingsBtn">⚙️</button>
+      </div>
+    </div>
+
+    <div id="settingsPanel">
+      <h3>Configuración</h3>
+
+      <div class="option">
+        <label>Color</label>
+        <input type="color" id="colorPicker" value="#3b82f6">
+      </div>
+
+      <div class="option">
+        <label>Obstáculos</label>
+        <label class="switch">
+          <input type="checkbox" id="obstaculos">
+          <span></span>
+        </label>
+      </div>
+
+      <div class="option">
+        <label>Teletransporte</label>
+        <label class="switch">
+          <input type="checkbox" id="teleport">
+          <span></span>
+        </label>
+      </div>
+
+      <div class="option">
+        <label>Velocidad</label>
+        <input type="range" id="speedControl" min="4" max="15" value="6">
+      </div>
+    </div>
+
+    <div id="startScreen">
+      <p>👉 Toca o presiona para jugar</p>
+    </div>
+
+    <div id="gameArea">
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+    </div>
+
+  </div>
+</div>
+
+<!-- 🔥 SEO MEJORADO -->
+<section class="seo-texto">
+
+<h2>Jugar Snake online gratis</h2>
+
+<p>
+Disfruta Snake PRO, una versión moderna del clásico juego de la serpiente.
+Controla la serpiente, come manzanas y evita chocar para lograr el mayor puntaje.
+</p>
+
+<p>
+Incluye velocidad ajustable, obstáculos, teletransporte y personalización de colores.
+Puedes jugar gratis desde tu navegador en celular o computador.
+</p>
+
+<h3>¿Cómo jugar Snake?</h3>
+<ul>
+<li>Usa flechas o desliza en pantalla</li>
+<li>Come comida para crecer</li>
+<li>Evita chocar</li>
+<li>Supera tu récord</li>
+</ul>
+
+</section>
+
+<!-- 🎮 RECOMENDADOS -->
+<section class="recomendados">
+  <h2>🎮 También te pueden gustar</h2>
+  <p>🔥 Prueba otros juegos populares</p>
+
+  <div class="reco-grid" id="recoGrid"></div>
+
+  <a href="../../index.html" class="ver-mas">Ver más juegos</a>
+</section>
+
+<script src="snake.js"></script>
+
+<script>
+function abrirJuego(){
+  const carga = document.getElementById("cargando");
+  carga.style.display = "flex";
+
+  document.body.style.overflow = "hidden";
+
+  setTimeout(()=>{
+    carga.style.display = "none";
+    document.getElementById("modo-juego").style.display = "flex";
+  },1500);
+}
+</script>
+
+<script>
+const juegos = [
+  {
+    nombre: "2048",
+    link: "../2048/2048.html",
+    img: "../2048/imagenes/miniatura.png"
+  },
+  {
+    nombre: "Sudoku",
+    link: "../sudoku/sudoku.html",
+    img: "../sudoku/imagenes/miniatura.png"
+  },
+  {
+    nombre: "Shooter",
+    link: "../spaceshooter/spaceshooter.html",
+    img: "../spaceshooter/imagenes/miniatura.png"
+  },
+  {
+    nombre: "Memoria",
+    link: "../memoria/memoria.html",
+    img: "../memoria/imagenes/miniatura.png"
+  }
+];
+
+// 🔥 MEZCLA REAL (Fisher-Yates)
+for (let i = juegos.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [juegos[i], juegos[j]] = [juegos[j], juegos[i]];
+}
+
+// tomar 3
+const seleccion = juegos.slice(0,3);
+
+const contenedor = document.getElementById("recoGrid");
+contenedor.innerHTML = ""; // limpiar por si acaso
+
+seleccion.forEach(juego => {
+  contenedor.innerHTML += `
+    <a href="${juego.link}" class="reco-card">
+      <img src="${juego.img}" alt="${juego.nombre}">
+      <p>${juego.nombre}</p>
+    </a>
+  `;
+});
+</script>
+
+</body>
+</html>

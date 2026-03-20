@@ -1,0 +1,148 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Segoe UI",Arial;
+background:linear-gradient(135deg,#f5f7fa,#e4ecf7);
+color:#2c3e50;
+text-align:center;
+}
+
+/* volver */
+.volver{
+position:absolute;
+top:15px;
+left:15px;
+background:white;
+color:#333;
+padding:8px 12px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* contenedor */
+.container{
+margin-top:70px;
+padding:20px;
+}
+
+h1{
+font-size:clamp(28px,6vw,42px);
+}
+
+#nivel{
+font-size:18px;
+margin-top:10px;
+color:#666;
+}
+
+/* display */
+#display{
+font-size:clamp(40px,10vw,70px);
+letter-spacing:12px;
+margin:25px;
+transition:0.3s;
+}
+
+/* timer */
+.timer{
+width:85%;
+max-width:420px;
+height:12px;
+background:#dfe6f1;
+margin:0 auto 20px auto;
+border-radius:20px;
+overflow:hidden;
+}
+
+.timer-bar{
+height:100%;
+width:100%;
+background:linear-gradient(90deg,#36d1dc,#5b86e5);
+transition:width linear;
+}
+
+/* input */
+input{
+padding:14px;
+font-size:22px;
+width:240px;
+text-align:center;
+border:none;
+border-radius:12px;
+outline:none;
+background:white;
+box-shadow:0 6px 15px rgba(0,0,0,0.15);
+margin-bottom:10px;
+}
+
+/* teclado */
+#teclado{
+display:grid;
+grid-template-columns:repeat(3,80px);
+gap:10px;
+justify-content:center;
+margin-top:15px;
+}
+
+.key{
+background:white;
+padding:15px;
+font-size:20px;
+border-radius:12px;
+box-shadow:0 4px 10px rgba(0,0,0,0.15);
+cursor:pointer;
+user-select:none;
+transition:0.15s;
+}
+
+.key:active{
+transform:scale(0.9);
+background:#dfe6f1;
+}
+
+/* botones */
+button{
+padding:12px 25px;
+font-size:18px;
+margin-top:15px;
+cursor:pointer;
+border:none;
+border-radius:12px;
+background:linear-gradient(135deg,#667eea,#764ba2);
+color:white;
+box-shadow:0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* mensaje */
+#mensaje{
+margin-top:15px;
+font-size:22px;
+min-height:30px;
+}
+
+.correcto{
+color:#00b894;
+}
+
+.error{
+color:#d63031;
+}
+
+/* modo extremo */
+.extremo{
+background:linear-gradient(135deg,#ff7675,#d63031);
+color:white;
+}
+
+/* responsive */
+@media(max-width:500px){
+#teclado{
+grid-template-columns:repeat(3,70px);
+}
+}

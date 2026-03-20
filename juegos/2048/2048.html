@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2048</title>
+<link rel="stylesheet" href="2048.css">
+</head>
+
+<body>
+
+<a href="../../index.html" class="menu-btn">⬅ Volver al menú</a>
+
+<h1>2048</h1>
+
+<div class="score-panel">
+  <div>Puntaje: <span id="score">0</span></div>
+  <div>Récord: <span id="record">0</span></div>
+</div>
+
+<div id="board"></div>
+
+<button id="restart">Reiniciar</button>
+
+<!-- CONTROLES TOUCH -->
+<div id="touch-controls">
+  <button data-dir="up">⬆</button>
+  <div>
+    <button data-dir="left">⬅</button>
+    <button data-dir="down">⬇</button>
+    <button data-dir="right">➡</button>
+  </div>
+</div>
+
+<script src="2048.js"></script>
+
+</body>
+</html>

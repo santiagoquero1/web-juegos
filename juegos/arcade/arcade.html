@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arcade Retro</title>
+
+<link rel="stylesheet" href="arcade.css">
+</head>
+
+<body>
+
+<a href="../../index.html" class="volver">⬅ Volver</a>
+
+<h1>🕹️ Arcade Retro</h1>
+
+<!-- 🎮 TARJETAS DE JUEGOS -->
+<div class="menu">
+
+  <div class="card" onclick="cargarJuego('pacman')">
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/59/Pac-man.png">
+    <p>Pac-Man</p>
+  </div>
+
+  <div class="card" onclick="cargarJuego('prince')">
+    <img src="https://upload.wikimedia.org/wikipedia/en/d/d1/Prince_of_Persia_cover.png">
+    <p>Prince of Persia</p>
+  </div>
+
+  <div class="card" onclick="cargarJuego('wolf')">
+    <img src="https://upload.wikimedia.org/wikipedia/en/0/05/Wolfenstein_3D_Coverart.png">
+    <p>Wolfenstein 3D</p>
+  </div>
+
+  <div class="card" onclick="cargarJuego('sf2')">
+    <img src="https://upload.wikimedia.org/wikipedia/en/2/2e/Street_Fighter_II.png">
+    <p>Street Fighter II</p>
+  </div>
+
+  <div class="card" onclick="cargarJuego('dk')">
+    <img src="https://upload.wikimedia.org/wikipedia/en/5/5e/Donkey_Kong_arcade.png">
+    <p>Donkey Kong</p>
+  </div>
+
+</div>
+
+<!-- 🎯 JUEGO -->
+<div class="arcade">
+  <iframe id="gameFrame"
+    src="https://archive.org/embed/msdos_Pac-Man_1983"
+    allowfullscreen>
+  </iframe>
+</div>
+
+<!-- 📱 CONTROLES CELULAR -->
+<div class="mobile-controls">
+  <button onclick="enviarTecla('ArrowUp')">⬆️</button><br>
+  <button onclick="enviarTecla('ArrowLeft')">⬅️</button>
+  <button onclick="enviarTecla('ArrowDown')">⬇️</button>
+  <button onclick="enviarTecla('ArrowRight')">➡️</button>
+</div>
+
+<script src="arcade.js"></script>
+
+</body>
+</html>

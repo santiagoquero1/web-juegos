@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Leeré tu mente</title>
+
+<link rel="stylesheet" href="mindreader.css">
+
+</head>
+
+<body>
+
+<a href="../../index.html" class="volver">⬅ Volver</a>
+
+<div class="container">
+
+<h1>🔮 Leeré tu mente</h1>
+
+<p class="subtitle">Sigue los pasos y descubriré tu símbolo</p>
+
+<div class="instructions">
+
+<div class="step">
+<div class="step-icon">1</div>
+<div class="step-text">Piensa un número de <b>2 cifras</b></div>
+</div>
+
+<div class="step">
+<div class="step-icon">2</div>
+<div class="step-text">Suma sus dígitos</div>
+</div>
+
+<div class="step">
+<div class="step-icon">3</div>
+<div class="step-text">Resta el resultado al número original</div>
+</div>
+
+<div class="step">
+<div class="step-icon">4</div>
+<div class="step-text">Busca tu número en la tabla</div>
+</div>
+
+<div class="step">
+<div class="step-icon">5</div>
+<div class="step-text">Recuerda su símbolo</div>
+</div>
+
+</div>
+
+<div class="game-area">
+
+<div id="tabla"></div>
+
+<div class="game-buttons">
+
+<button id="btnLeer">🔮 Leer mi mente</button>
+<button id="nuevaRonda">Nueva ronda</button>
+
+</div>
+
+</div>
+
+<div id="scan">Escaneando tu mente...</div>
+
+</div>
+
+<!-- CARTA REVELACION -->
+
+<div id="cardReveal" class="card-reveal">
+
+<div class="card-container">
+
+<div class="card">
+
+<div class="card-face card-front">
+?
+</div>
+
+<div class="card-face card-back">
+<span id="cardSymbol"></span>
+<p>Esta es tu carta</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="mindreader.js"></script>
+
+</body>
+</html>

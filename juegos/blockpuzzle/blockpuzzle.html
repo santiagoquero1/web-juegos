@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Block Puzzle</title>
+
+<link rel="stylesheet" href="blockpuzzle.css">
+
+</head>
+
+<body>
+
+<h1>🧩 Block Puzzle</h1>
+
+<div class="scoreboard">
+  <div>Puntos<br><b id="score">0</b></div>
+  <div>Record<br><b id="record">0</b></div>
+</div>
+
+<div id="game">
+
+  <div id="board"></div>
+
+  <div id="pieces"></div>
+
+</div>
+
+<div id="gameOver">
+  <h2>Game Over</h2>
+  <p>No quedan movimientos</p>
+  <button onclick="location.reload()">Jugar otra vez</button>
+</div>
+
+<script src="blockpuzzle.js"></script>
+
+</body>
+</html>

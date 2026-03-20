@@ -1,0 +1,245 @@
+/* ===== ESTILO GENERAL ===== */
+
+body{
+margin:0;
+font-family:'Segoe UI', Arial, sans-serif;
+background:linear-gradient(135deg,#e0f2ff,#f8fbff);
+color:#1e293b;
+text-align:center;
+}
+
+/* ===== NAVBAR ===== */
+
+.navbar{
+position:sticky;
+top:0;
+z-index:1000;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:12px 20px;
+background:rgba(255,255,255,0.9);
+backdrop-filter:blur(10px);
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.logo{
+font-weight:bold;
+font-size:20px;
+}
+
+.search{
+padding:10px 15px;
+border-radius:25px;
+border:1px solid #ddd;
+width:220px;
+outline:none;
+transition:.2s;
+}
+
+.search:focus{
+border-color:#00aaff;
+box-shadow:0 0 0 3px rgba(0,170,255,0.2);
+}
+
+.nav-links a{
+margin:0 10px;
+text-decoration:none;
+color:#334155;
+font-size:14px;
+cursor:pointer;
+transition:.2s;
+padding:6px 10px;
+border-radius:10px;
+}
+
+.nav-links a:hover{
+background:#e0f2ff;
+color:#0284c7;
+}
+
+/* ===== HEADER ===== */
+
+header{
+padding:40px 20px;
+}
+
+header h1{
+font-size:48px;
+margin:0;
+background:linear-gradient(90deg,#ff7a18,#ffb347,#00c6ff);
+-webkit-background-clip:text;
+background-clip:text;
+-webkit-text-fill-color:transparent;
+}
+
+header p{
+margin-top:10px;
+color:#475569;
+}
+
+/* ===== GRID ===== */
+
+.games-container{
+max-width:1200px;
+margin:auto;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+padding:30px;
+}
+
+/* ===== TARJETAS ===== */
+
+.game-card{
+background:white;
+border-radius:18px;
+padding:12px;
+text-decoration:none;
+color:#1e293b;
+transition:all .25s ease;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+position:relative;
+overflow:hidden;
+}
+
+/* IMAGEN */
+
+.game-card img{
+width:100%;
+aspect-ratio:1/1;
+object-fit:cover;
+border-radius:12px;
+}
+
+/* TEXTO */
+
+.game-card h2{
+margin:10px 0 5px;
+font-size:18px;
+}
+
+.game-card p{
+font-size:14px;
+color:#64748b;
+}
+
+/* HOVER MÁS PRO */
+
+.game-card:hover{
+transform:translateY(-8px) scale(1.03);
+box-shadow:0 25px 50px rgba(0,0,0,0.15);
+}
+
+/* EFECTO BRILLO */
+
+.game-card::before{
+content:"";
+position:absolute;
+top:0;
+left:-120%;
+width:100%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.7),
+transparent
+);
+transition:0.6s;
+}
+
+.game-card:hover::before{
+left:120%;
+}
+
+/* ===== SEO TEXTO ===== */
+
+.seo-texto{
+padding:40px 20px;
+max-width:800px;
+margin:auto;
+line-height:1.7;
+color:#334155;
+}
+
+.seo-texto h2{
+margin-bottom:10px;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
+margin-top:30px;
+padding:20px;
+font-size:14px;
+color:#64748b;
+}
+
+.credits{
+margin-top:40px;
+padding:20px;
+text-align:center;
+color:#94a3b8;
+font-size:13px;
+border-top:1px solid #e2e8f0;
+}
+
+.credits strong{
+color:#22c55e;
+}
+
+/* ===== MOBILE ===== */
+
+@media(max-width:600px){
+
+header h1{
+font-size:28px;
+}
+
+/* 🔥 3 juegos por fila */
+.games-container{
+grid-template-columns:repeat(3, 1fr);
+gap:10px;
+padding:10px;
+}
+
+/* tarjetas más compactas */
+.game-card{
+padding:8px;
+border-radius:12px;
+}
+
+/* imagen */
+.game-card img{
+aspect-ratio:1/1;
+}
+
+/* texto compacto */
+.game-card h2{
+font-size:11px;
+margin:5px 0 2px;
+}
+
+.game-card p{
+display:none;
+}
+
+/* navbar mobile */
+.search{
+display:none;
+}
+
+.nav-links{
+display:flex;
+gap:6px;
+font-size:11px;
+overflow-x:auto;
+padding-bottom:5px;
+}
+
+.nav-links a{
+white-space:nowrap;
+}
+
+}

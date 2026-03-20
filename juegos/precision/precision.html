@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Precision</title>
+<link rel="stylesheet" href="precision.css">
+</head>
+
+<body>
+
+<a href="../../index.html" class="volver">⬅ Volver al menú</a>
+
+<div class="game-container">
+
+<h1>🎯 Precision</h1>
+
+<div class="panel">
+<div>Precisión: <b id="percent">0%</b></div>
+<div>Score: <b id="score">0</b></div>
+</div>
+
+<p id="message"></p>
+
+<h2 id="shapeText">Dibuja un CUADRADO</h2>
+
+<div class="canvas-wrapper">
+<canvas id="gameCanvas"></canvas>
+
+<div id="resultOverlay">
+  <span id="resultText">100%</span>
+</div>
+</div>
+
+<p class="info">
+Mantén presionado para dibujar la figura
+</p>
+
+<button id="nextLevel">Siguiente nivel ➜</button>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script src="precision.js"></script>
+
+</body>
+</html>

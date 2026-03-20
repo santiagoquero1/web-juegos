@@ -1,0 +1,121 @@
+body{
+font-family:"Segoe UI",sans-serif;
+background:#f4f7fb;
+color:#222;
+text-align:center;
+margin:0;
+padding:20px;
+}
+
+/* BOTON VOLVER */
+.menu-btn{
+position:absolute;
+top:15px;
+left:15px;
+background:#4caf50;
+color:white;
+padding:8px 14px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* TITULO */
+h1{
+margin-top:20px;
+}
+
+/* AREA PRINCIPAL */
+#area{
+width:90%;
+max-width:420px;
+height:220px;
+margin:30px auto;
+border-radius:16px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:26px;
+color:white;
+cursor:pointer;
+transition:all .25s ease;
+box-shadow:0 10px 20px rgba(0,0,0,0.15);
+user-select:none;
+}
+
+/* PANEL */
+.panel{
+display:flex;
+justify-content:center;
+gap:40px;
+margin:20px;
+font-size:18px;
+}
+
+/* BOTON */
+button{
+padding:12px 30px;
+font-size:18px;
+border:none;
+border-radius:10px;
+background:#ffcc00;
+cursor:pointer;
+transition:.2s;
+font-weight:bold;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+/* 🔥 ESTADOS (IMPORTANTE) */
+.waiting{
+background:#ff6b6b !important;
+}
+
+.ready{
+background:#2ecc71 !important;
+transform:scale(1.03);
+box-shadow:0 0 20px rgba(46,204,113,0.6);
+}
+
+.tooSoon{
+background:#e74c3c !important;
+animation:shake 0.3s;
+}
+
+.result{
+background:#3498db !important;
+}
+
+/* ANIMACION ERROR */
+@keyframes shake{
+0%{transform:translateX(0);}
+25%{transform:translateX(-5px);}
+50%{transform:translateX(5px);}
+75%{transform:translateX(-5px);}
+100%{transform:translateX(0);}
+}
+
+/* MOBILE */
+@media(max-width:500px){
+
+h1{
+font-size:22px;
+}
+
+#area{
+height:180px;
+font-size:22px;
+}
+
+.panel{
+gap:20px;
+font-size:16px;
+}
+
+button{
+width:80%;
+}
+
+}

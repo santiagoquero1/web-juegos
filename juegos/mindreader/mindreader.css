@@ -1,0 +1,242 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Segoe UI",Arial;
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+/* fondo */
+body::before{
+content:"";
+position:fixed;
+width:200%;
+height:200%;
+background:radial-gradient(circle,rgba(255,255,255,0.05) 1px,transparent 1px);
+background-size:40px 40px;
+animation:moveBg 25s linear infinite;
+z-index:-1;
+}
+
+@keyframes moveBg{
+from{transform:translate(0,0)}
+to{transform:translate(-200px,-200px)}
+}
+
+/* volver */
+.volver{
+position:absolute;
+top:15px;
+left:15px;
+background:white;
+color:#333;
+padding:8px 12px;
+border-radius:10px;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* contenedor */
+.container{
+max-width:1200px;
+margin:auto;
+padding:20px;
+}
+
+h1{
+font-size:clamp(28px,6vw,42px);
+}
+
+.subtitle{
+font-size:clamp(14px,4vw,18px);
+margin-bottom:20px;
+opacity:0.8;
+}
+
+/* instrucciones */
+.instructions{
+max-width:600px;
+margin:auto;
+text-align:left;
+margin-bottom:20px;
+}
+
+.step{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:10px;
+font-size:clamp(14px,4vw,18px);
+}
+
+.step-icon{
+width:28px;
+height:28px;
+border-radius:50%;
+background:#00f2fe;
+color:black;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+}
+
+/* tabla */
+#tabla{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(55px,1fr));
+gap:8px;
+}
+
+/* celdas (más suaves) */
+.celda{
+background:white;
+color:#333;
+padding:10px 5px;
+border-radius:10px;
+font-size:clamp(12px,3.5vw,18px);
+font-weight:bold;
+box-shadow:0 4px 10px rgba(0,0,0,0.2);
+
+opacity:0;
+transform:scale(0.5);
+animation:appear 1s cubic-bezier(0.22,1,0.36,1) forwards;
+}
+
+@keyframes appear{
+0%{
+opacity:0;
+transform:scale(0.5) translateY(20px);
+}
+70%{
+opacity:1;
+transform:scale(1.08) translateY(-5px);
+}
+100%{
+opacity:1;
+transform:scale(1) translateY(0);
+}
+}
+
+/* botones */
+.game-buttons{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
+margin-top:20px;
+}
+
+button{
+padding:12px 20px;
+font-size:clamp(14px,4vw,18px);
+border:none;
+border-radius:10px;
+background:linear-gradient(135deg,#00f2fe,#4facfe);
+color:black;
+cursor:pointer;
+}
+
+button:active{
+transform:scale(0.95);
+}
+
+#nuevaRonda{
+background:linear-gradient(135deg,#43e97b,#38f9d7);
+}
+
+/* scan */
+#scan{
+display:none;
+font-size:22px;
+margin-top:20px;
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{opacity:1}
+50%{opacity:0.3}
+100%{opacity:1}
+}
+
+/* reveal */
+.card-reveal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+align-items:center;
+justify-content:center;
+}
+
+/* CONTENEDOR (pop) */
+.card-container{
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* CARTA */
+.card{
+width:80vw;
+max-width:300px;
+aspect-ratio:3/4;
+position:relative;
+transform-style:preserve-3d;
+transition:transform 0.6s ease;
+}
+
+/* 👇 GIRO REAL */
+.card.flip{
+transform:rotateY(180deg);
+}
+
+/* 👇 efecto previo */
+.card-container.pop{
+animation:popCard 0.25s ease;
+}
+
+@keyframes popCard{
+0%{transform:scale(0.9)}
+100%{transform:scale(1)}
+}
+
+/* caras */
+.card-face{
+position:absolute;
+width:100%;
+height:100%;
+border-radius:20px;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+font-size:clamp(50px,15vw,100px);
+background:white;
+color:#333;
+backface-visibility:hidden;
+}
+
+.card-front{
+background:linear-gradient(135deg,#00f2fe,#4facfe);
+color:black;
+font-size:80px;
+}
+
+.card-back{
+transform:rotateY(180deg);
+}
+
+.card-back p{
+font-size:16px;
+margin-top:10px;
+}

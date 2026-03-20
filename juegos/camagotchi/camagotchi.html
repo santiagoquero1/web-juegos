@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camagotchi</title>
+
+<link rel="stylesheet" href="camagotchi.css">
+</head>
+
+<body>
+
+<div class="top">
+  <div class="coins">🪙 <span id="coins">0</span></div>
+  <button id="shopBtn">🛒</button>
+</div>
+
+<h1>Camagotchi 🦐</h1>
+
+<div class="game">
+
+  <div id="pet-area" class="pet-area">
+    <div id="pet">
+      <img src="imagenes/camaron.png" id="petImg">
+    </div>
+  </div>
+
+  <div class="stats">
+
+    <p>Hambre</p>
+    <div class="bar"><div id="hambre"></div></div>
+
+    <p>Felicidad</p>
+    <div class="bar"><div id="felicidad"></div></div>
+
+    <p>Higiene</p>
+    <div class="bar"><div id="higiene"></div></div>
+
+  </div>
+
+  <div id="foods" class="food-menu">
+    <div class="food">🍔</div>
+    <div class="food">🍕</div>
+    <div class="food">🍟</div>
+    <div class="food">🍩</div>
+  </div>
+
+  <div class="tools">
+    <div id="soap" class="tool">🧼</div>
+    <div id="shower" class="tool">🚿</div>
+    <div id="sleep" class="tool">🌙</div>
+    <div id="play" class="tool">🎮</div>
+  </div>
+
+</div>
+
+<div id="shop">
+  <h2>Tienda</h2>
+
+  <div class="shop-items">
+    <button data-food="🍤" data-price="5">🍤 - 5🪙</button>
+    <button data-food="🍣" data-price="8">🍣 - 8🪙</button>
+    <button data-food="🍰" data-price="10">🍰 - 10🪙</button>
+  </div>
+
+  <button onclick="cerrarTienda()">Cerrar</button>
+</div>
+
+<script src="camagotchi.js"></script>
+
+</body>
+</html>

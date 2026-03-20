@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<title>Buscaminas</title>
+<link rel="stylesheet" href="minesweeper.css">
+</head>
+
+<body>
+
+<a href="../../index.html" class="menu-btn">← Menú</a>
+
+<h1>💣 Buscaminas</h1>
+
+<div class="controls">
+
+<select id="difficulty">
+<option value="easy">Fácil</option>
+<option value="medium">Medio</option>
+<option value="hard">Difícil</option>
+</select>
+
+<button onclick="startGame()">Nuevo juego</button>
+
+<span>⏱ Tiempo: <span id="time">0</span></span>
+<span>🏆 Récord: <span id="record">--</span></span>
+
+</div>
+
+<div id="board"></div>
+
+<div id="gameOver" class="overlay">
+<h2 id="result"></h2>
+<button onclick="startGame()">Jugar otra vez</button>
+</div>
+
+<script src="minesweeper.js"></script>
+
+</body>
+</html>

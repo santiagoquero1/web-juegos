@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(180deg, #e3f2fd, #ffffff);
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* volver */
+.volver {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(0,0,0,0.6);
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* contenedor */
+.game-container {
+  text-align: center;
+  width: 90%;
+  max-width: 900px;
+}
+
+/* titulo arcoiris */
+h1 {
+  background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet);
+  background-size: 1000% 100%;
+  animation: arcoiris 6s linear infinite;
+
+  -webkit-background-clip: text;
+  background-clip: text; /* 👈 ESTA LÍNEA FALTABA */
+  color: transparent;
+}
+
+/* panel */
+.panel {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+/* mensaje */
+#message {
+  margin-top: 10px;
+  font-weight: bold;
+  height: 20px;
+}
+
+.ok { color: #4CAF50; }
+.error { color: #f44336; }
+
+/* canvas */
+.canvas-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+#gameCanvas {
+  width: 100%;
+  max-width: 700px;
+  height: 60vh;
+
+  background: rgba(255,255,255,0.6);
+  border-radius: 15px;
+
+  touch-action: none;
+
+  cursor:url('https://cdn-icons-png.flaticon.com/32/1250/1250615.png') 2 28, auto;
+}
+
+/* resultado centro */
+#resultOverlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+#resultText {
+  font-size: 80px;
+  font-weight: bold;
+
+  background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet);
+  background-size: 1000% 100%;
+  animation: arcoiris 3s linear infinite;
+
+  -webkit-background-clip: text;
+  background-clip: text; /* 👈 TAMBIÉN AQUÍ */
+  color: transparent;
+}
+
+.showResult {
+  animation: pop 0.4s ease forwards;
+}
+
+@keyframes pop {
+  from { transform: translate(-50%, -50%) scale(0.5); opacity: 0; }
+  to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+@keyframes arcoiris {
+  0% { background-position: 0% }
+  100% { background-position: 1000% }
+}
+
+/* boton */
+button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(270deg, #00c6ff, #0072ff);
+  color: white;
+  font-size: 18px;
+}
+
+/* responsive */
+@media(max-width:600px){
+  #resultText { font-size: 50px; }
+}
